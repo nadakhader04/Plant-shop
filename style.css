@@ -1,0 +1,347 @@
+:root{
+    --primary-color: #28a745;
+}
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: auto 1fr; 
+    height: 100%;
+}
+
+header {  grid-column: 1 / -1; }
+
+aside {  grid-row: 2 / 3; }
+main {   grid-row: 2 / 3; }
+footer{ grid-column: 1 / -1;  }
+.navbar-brand img{
+    width: 40px;
+    height: 40px;
+}
+.text , .title-photo, .categories, .SocialMedia{
+    font-family: "Open Sans", serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+body.dark-mode .text{ color: #fff;}
+.navbar .nav-link {
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color); 
+}
+
+.search-container .input-group-text {
+    background: none;
+    border-right: none;
+}
+
+.search-container .form-control {
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    height: 1.85rem;
+}
+
+.search-container input:focus {
+    box-shadow: none;
+    border-color: var(--primary-color); 
+}
+.account:hover{
+    cursor: pointer;   
+}
+.username{ font-size: 15px; font-weight: 200;}
+.username:hover{
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+.account-photo {
+    border: 1.6px solid #444;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    padding: 0;
+  }
+
+.account-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+.image-header{
+    overflow: hidden; 
+    width: 100%; 
+    height: 20vh; 
+}
+.image-header img {
+    width: 100%; 
+    height: 90%;
+    object-fit: cover; 
+}
+
+.title-photo {
+    top: 30%;
+    color: rgba(36, 56, 31, 0.925);
+}
+aside{
+    border-right: 1px solid #aaaaaa75;
+    margin-right: 1rem;
+    width: fit-content; 
+    height: 100vh;  
+    color: inherit;
+}
+.filter{margin-bottom: 1.5rem;}
+.filter-option label{
+    display: flex;
+    gap: 0.7rem;
+    margin-right: 1rem;
+    font-family: 'Courier New', Courier, monospace; 
+}
+aside button, button span{
+    display: flex;
+    padding-top: 1rem;
+}
+aside button span i{
+    margin-right: 1rem;
+}
+.SocialMedia button, .QuickActions button, .filter button{
+    width: 100%;
+    height: 3rem;
+    padding-left: 1.4rem;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(41, 88, 45, 0.959);  
+}
+.SocialMedia button span, .SocialMedia button i, .QuickActions button span, .QuickActions button i, .filter button span{
+    padding-top: .8rem;
+}
+body.dark-mode .SocialMedia button, body.dark-mode .filter button {
+    color: var(--primary-color);
+}
+
+.SocialMedia button:hover, .QuickActions button:hover, .filter button:hover{
+    cursor: pointer;
+    background-color: #eeeaeabb;
+}
+.QuickActions button{
+    color: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.light{ display: none;}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+main img {
+    width: 50px;
+    height: 150px;
+    border-radius: 16px;
+    width: 100%; 
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.item{
+    width: 150px;
+    height: 200px;
+    background-color: inherit;
+    border-radius: 16px;
+}
+
+.item div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.item p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: inherit;
+    text-align: center;
+} 
+body.dark-mode .item div i{
+    color: inherit;
+}
+.item i {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: inherit;
+} 
+.item i:hover ,body.dark-mode .item div i:hover{
+    color: rgb(248, 0, 0);
+}
+.item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+footer {
+    background: #F8F9F4;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10%;
+    box-shadow: 0px -1px 3px#F8F9F4;
+}
+body.dark-mode footer{
+    background: #5c645383;
+    box-shadow: 0px -1px 6px#5c645383;
+}
+footer .footer-image {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+footer img:hover {
+    transform: scale(1.1); 
+}
+
+.tail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.footer-image img {
+    width: 100%; 
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-image img:hover {
+    transform: scale(1.1);
+}
+
+.tail .join {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+span {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: inherit;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Login {
+    background: var(--primary-color);
+    color: white;
+}
+
+.signup {
+    background: #444;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+@media screen and (max-width : 768px ) {
+    .navbar-brand{
+        width: 20px;
+        height: 30px;
+    }
+    .navbar-brand img {
+        width: 35px;
+        height: 35px;
+    }
+    .navbar-brand .text{
+        font-size: 16px;
+    }
+    .repo{
+        margin-left: 1.5rem;
+    }
+    .navbar-toggler, .navbar-brand{ margin-bottom: 1rem;}
+    .repo .navbar-toggler{
+        font-size: small;
+        margin-right: 0.5rem;
+        border: none;
+    }
+    /* .account{ma} */
+    .repo .account .account-photo {
+        align-items: center;
+        margin-left: 16px;
+        width: 10px;
+        height: 30px;
+    }
+    .repo .account .username{
+        font-size: 13px;
+    }
+    aside button .property, .filter-option label, .categories{
+        display: none;
+    } 
+    aside.show .property,aside.show .filter-option label,aside.show .categories {
+        display: block; 
+    }
+    .filter-option label input{
+        margin-right: 5px;
+    }
+    .SocialMedia button, .QuickActions button, .filter button, .filter-option{
+        font-size: 13px;
+    }    
+    main img {
+        height: 90px;
+    }
+    .item{
+        width: 100px;
+        height: 120px;
+    }
+    .item p , .item i{
+        font-size: 11px;
+    } 
+    .footer-image img {
+        width: 100%; 
+        height: 50px;
+    }
+
+    .tail {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .join {
+       width: 40%;
+    }   
+
+}
