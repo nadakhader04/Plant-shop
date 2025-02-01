@@ -298,11 +298,10 @@ button:hover {
         margin-right: 0.5rem;
         border: none;
     }
-    /* .account{ma} */
     .repo .account .account-photo {
         align-items: center;
         margin-left: 16px;
-        width: 10px;
+        width: 30px;
         height: 30px;
     }
     .repo .account .username{
